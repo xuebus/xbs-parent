@@ -1,6 +1,6 @@
 package com.xuebusi.fjf.sequence.interceptor;
 
-import com.foriseland.fjf.exception.BaseExcepton;
+import com.xuebusi.fjf.exception.BaseExcepton;
 import com.xuebusi.fjf.sequence.annotation.SequenceField;
 import com.xuebusi.fjf.sequence.handle.SequenceUtil;
 import com.xuebusi.fjf.sequence.util.ReflectHelper;

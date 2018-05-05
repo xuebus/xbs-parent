@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:registry protocol="zookeeper" address="192.168.2.1:2181" id="consumer-favormall-registry" register="true" check="true" />
+    <!-- 客户端默认设置 -->
+    <dubbo:consumer timeout="5000" check="false" retries="0" registry="consumer-favormall-registry"/>
+
+<!--     <dubbo:reference  id="productService" interface="com.foriseland.ec.product.consumer.api.product.IProductService" url="dubbo://localhost:20998"/> -->
+	<!-- 类目服务 -->
+    <!--<dubbo:reference id="categoryInfoService" interface="com.foriseland.ec.product.consumer.api.manage.ICategoryInfoService" />
+
+    <dubbo:reference id="productService" interface="com.foriseland.ec.product.consumer.api.product.IProductService"/>
+    <dubbo:reference id="mallGoodsCircleApi" interface="com.foriseland.fsoa.circle.consumer.api.IMallGoodsCircleApi"/>
+    <dubbo:reference id="payRefundApi" interface="com.foriseland.fsoa.pay.consumer.api.IPayRefundApi"/>
+
+    <dubbo:reference id="userChipService" interface="com.foriseland.ec.personal.consumer.api.IUserChipService" />
+    <dubbo:reference id="mallActivityApi" interface="com.foriseland.fsoa.mallActivity.consumer.api.IMallActivityApi"/>
+    <dubbo:reference id="recommendationApi" interface="com.foriseland.fsoa.recommendation.consumer.api.IRecommendationApi"/>
+    <dubbo:reference id="collectService" interface="com.foriseland.ec.myself.consumer.api.IMyCollectService"/>
+    <dubbo:reference id="profitBeansDetailApi" interface="com.foriseland.fsoa.pay.consumer.api.IProfitBeansDetailApi"/>
+    <dubbo:reference id="mallMemberApi" interface="com.foriseland.fsoa.member.consumer.api.IMallMemberApi"/>
+    <dubbo:reference id="sellerInfoService" interface="com.foriseland.ec.seller.consumer.api.ISellerInfoService"/>
+    <dubbo:reference id="orderSplitService" interface="com.foriseland.ec.order.consumer.api.IOrderSplitService"/>
+    <dubbo:reference id="orderService" interface="com.foriseland.ec.order.consumer.api.IOrderService"/>
+    <dubbo:reference id="profitBeansSerialApi" interface="com.foriseland.fsoa.pay.consumer.api.IProfitBeansSerialApi"/>
+    <dubbo:reference id="rateApi" interface="com.foriseland.fsoa.pay.consumer.api.IRateApi"/>
+    <dubbo:reference id="productSaleCountService" interface="com.foriseland.ec.product.consumer.api.product.IProductSaleCountService"/>
+    <dubbo:reference id="memberPrivilegeConditionsApi" interface="com.foriseland.fsoa.privilege.consumer.api.IMemberPrivilegeConditionsApi"/>
+    <dubbo:reference id="privilegeConditionsApi" interface="com.foriseland.fsoa.privilege.consumer.api.IPrivilegeConditionsApi"/>
+    <dubbo:reference id="sendMessageApi" interface="com.foriseland.fsoa.message.consumer.api.ISendMessageApi"/>-->
+</beans>

@@ -1,7 +1,7 @@
 package com.xuebusi.fjf.mq.consumer;
 
 import com.xuebusi.fjf.mq.motion.IKafkaConsumerServer;
-import com.foriseland.fjf.util.SpringContextUtil;
+import com.xuebusi.fjf.util.SpringContextUtil;
 
 import java.util.ArrayList;
 import java.util.List;

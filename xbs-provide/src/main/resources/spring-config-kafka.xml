@@ -1,0 +1,24 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-autowire="byName">
+
+    <bean id="activeServer" class="com.foriseland.fjf.mq.producer.KafkaProducerGeneric"
+          init-method="init" destroy-method="close" lazy-init="true">
+        <property name="properties">
+            <props>
+                <prop key="bootstrap.servers">${kafka.namesrvAddr}</prop>
+                <prop key="acks">all</prop>
+                <prop key="retries">1</prop>
+                <prop key="batch.size">16384</prop>
+                <prop key="linger.ms">1</prop>
+                <prop key="buffer.memory">33554432</prop>
+                <prop key="serializer.class">kafka.serializer.StringEncoder</prop>
+                <prop key="key.serializer">org.apache.kafka.common.serialization.StringSerializer</prop>
+                <prop key="value.serializer">org.apache.kafka.common.serialization.StringSerializer</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

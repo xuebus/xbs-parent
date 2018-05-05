@@ -1,6 +1,6 @@
 package com.xuebusi.fjf.sequence.handle;
 
-import com.foriseland.fjf.exception.BaseExcepton;
+import com.xuebusi.fjf.exception.BaseExcepton;
 import com.xuebusi.fjf.sequence.domain.SequenceModel;
 import org.apache.commons.lang3.StringUtils;
 

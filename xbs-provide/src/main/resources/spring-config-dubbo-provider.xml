@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <dubbo:application name="fl.ec.active"/>
+    <dubbo:protocol name="dubbo" port="${active.dubbo.port}"/>
+    <dubbo:registry id="product-favormall-registry" protocol="zookeeper" address="${active.dubbo.zk.address}"/>
+    <!-- 服务器端默认设置 -->
+
+    <dubbo:provider timeout="5000" registry="product-favormall-registry"/>
+   <!--<dubbo:service  interface="com.foriseland.ec.active.consumer.api.IGroupBuyService" ref="groupBuyServiceImplRpc"/>
+
+    <dubbo:service  interface="com.foriseland.ec.active.consumer.api.IMyselfPieceService"  ref="myselfPieceServiceImplRpc"/>
+    <dubbo:service  interface="com.foriseland.ec.active.consumer.api.IActEveryoneActiveService"  ref="actEveryoneActiveServiceImplRpc"/>
+    <dubbo:service  interface="com.foriseland.ec.active.consumer.api.ISeckillActiveService"  ref="seckillActiveServiceImplRpc"/>
+    <dubbo:service  interface="com.foriseland.ec.active.consumer.api.IActiveCommonService"  ref="activeCommonServiceImplRpc"/>
+    <dubbo:service  interface="com.foriseland.ec.active.consumer.api.IMultiActiveService"  ref="multiActiveServiceImplRpc"/>
+    <dubbo:service  interface="com.foriseland.ec.active.consumer.api.IUltimaActiveService"  ref="ultimaActiveServiceImplRpc"/>
+    <dubbo:service  interface="com.foriseland.ec.active.consumer.api.ILabelActiveService"  ref="labelActiveRelImplRpc"/>
+    <dubbo:service  interface="com.foriseland.ec.active.consumer.api.IActExplosionActiveService"  ref="actExplosionActiveServiceImplRpc"/>
+    <dubbo:service  interface="com.foriseland.ec.active.consumer.api.IGuessLikeService"  ref="guessLikeServiceImplRpc"/>
+    <dubbo:service  interface="com.foriseland.ec.active.consumer.api.IFindNiceGoodsService"  ref="findNiceGoodsServiceImplRpc"/>
+    <dubbo:service  interface="com.foriseland.ec.active.consumer.api.IActiveOrderService"  ref="activeOrderServiceImplRpc"/>
+    <dubbo:service  interface="com.foriseland.ec.active.consumer.api.IActiveOrderMqKafkaService"  ref="activeOrderMqKafkaServiceImplRpc"/>-->
+
+</beans>

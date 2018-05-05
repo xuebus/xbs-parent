@@ -1,7 +1,7 @@
 package com.xuebusi.fjf.datasource;
 
 import com.xuebusi.fjf.annotation.MarkMasterDataSource;
-import com.foriseland.fjf.exception.BaseExcepton;
+import com.xuebusi.fjf.exception.BaseExcepton;
 import com.xuebusi.fjf.sequence.util.ReflectHelper;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.JoinPoint;
@@ -77,7 +77,7 @@ public class DataSourceAspect {
 	/**
 	 * 在进入Service方法之前执行
 	 * 
-	 * @param JoinPoint
+	 * @param point
 	 *            切面对象
 	 * @throws BaseExcepton
 	 * @throws IllegalAccessException

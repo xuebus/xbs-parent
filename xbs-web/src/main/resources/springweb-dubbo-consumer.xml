@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <dubbo:application name="favormallWeb"/>
+    <dubbo:registry protocol="zookeeper" address="${userManage.dubbo.zk.address}" id="consumer-favormall-registry" register="true" check="true" />
+
+    <!--<dubbo:reference  id="groupBuyService" interface="com.foriseland.ec.active.consumer.api.IGroupBuyService" />
+    <dubbo:reference  id="myselfPieceService" interface="com.foriseland.ec.active.consumer.api.IMyselfPieceService" />
+    <dubbo:reference  id="seckillActiveService" interface="com.foriseland.ec.active.consumer.api.ISeckillActiveService" />
+    <dubbo:reference  id="activeCommonService" interface="com.foriseland.ec.active.consumer.api.IActiveCommonService" />
+    <dubbo:reference  id="multiActiveService" interface="com.foriseland.ec.active.consumer.api.IMultiActiveService" url="dubbo://localhost:29880"/>
+    <dubbo:reference  id="ultimaActiveService" interface="com.foriseland.ec.active.consumer.api.IUltimaActiveService" url="dubbo://localhost:29880"/>
+    <dubbo:reference  id="actEveryoneActiveService" interface="com.foriseland.ec.active.consumer.api.IActEveryoneActiveService"/>
+    <dubbo:reference  id="labelActiveService" interface="com.foriseland.ec.active.consumer.api.ILabelActiveService"/>
+    <dubbo:reference  id="actExplosionActiveService" interface="com.foriseland.ec.active.consumer.api.IActExplosionActiveService"/>
+    <dubbo:reference  id="activeOrderService" interface="com.foriseland.ec.active.consumer.api.IActiveOrderService"/>-->
+
+</beans>
