@@ -520,5 +520,6 @@
         <module>xbs-service</module>
         <module>xbs-dao</module>
         <module>xbs-domain</module>
+        <module>xbs-jwt</module>
     </modules>
 </project>
